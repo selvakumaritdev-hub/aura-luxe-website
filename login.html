@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in | Aura Luxe Residences</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Tamil:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a09;--s1:#131110;--s2:#1a1714;--line:rgba(201,169,110,.2);--gold:#c9a96e;--gl:#efe2c3;--tx:#f4efe6;--mu:#a8a095;--dim:#78716a;--ok:#7fc8a0;--bad:#d9806f}
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:14px}
+body{background:var(--bg);color:var(--tx);font-family:Inter,'Noto Sans Tamil','Noto Sans Devanagari',sans-serif;min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;cursor:pointer}a:hover{color:var(--gl)}
+.hero{position:relative;background:linear-gradient(180deg,rgba(11,10,9,.35),rgba(11,10,9,.92)),url(assets/images/villa_front.webp) center/cover;padding:44px;display:flex;flex-direction:column;justify-content:space-between}
+.logo{font:500 20px 'Playfair Display',serif;color:var(--gl);letter-spacing:.03em}.logo small{display:block;font:500 9px Inter;letter-spacing:.3em;color:var(--gold);margin-top:4px}
+.hero blockquote{font:italic 400 28px/1.35 'Playfair Display',serif;color:var(--gl);max-width:460px}.hero cite{display:flex;gap:12px;align-items:center;margin-top:22px;font-style:normal;font-size:12.5px;color:var(--mu)}
+.hero cite i{width:40px;height:40px;border-radius:50%;background:url(assets/images/living_room.webp) center/cover;border:1.5px solid var(--gold)}
+.stats{display:flex;gap:30px;margin-top:30px;font-size:11px;color:var(--mu)}.stats b{display:block;font:500 22px 'Playfair Display',serif;color:var(--gl)}
+.right{display:flex;flex-direction:column;padding:28px 56px;overflow-y:auto}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:auto}
+.lang{display:flex;gap:4px;background:var(--s1);border:1px solid var(--line);border-radius:99px;padding:3px}.lang button{background:none;border:0;color:var(--mu);font:inherit;font-size:11.5px;padding:5px 12px;border-radius:99px;cursor:pointer}.lang button.on{background:var(--gold);color:#1a1714;font-weight:600}
+.box{width:100%;max-width:400px;margin:36px auto}
+h1{font:500 30px 'Playfair Display',serif;margin-bottom:8px}.sub{color:var(--mu);font-size:13px;margin-bottom:24px;line-height:1.5}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--s1);border:1px solid var(--line);border-radius:11px;padding:3px;margin-bottom:22px}.tabs button{background:none;border:0;color:var(--mu);padding:9px;border-radius:9px;font:inherit;font-size:12.5px;cursor:pointer}.tabs button.on{background:var(--s2);color:var(--gl);box-shadow:0 0 0 1px var(--line)}
+label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin:14px 0 7px}
+.f{position:relative}input[type=text],input[type=password],input[type=email],input[type=tel]{width:100%;background:var(--s1);border:1px solid var(--line);color:var(--tx);padding:12px 14px;border-radius:10px;font:inherit;font-size:13.5px;outline:0;transition:.2s}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,110,.12)}input.err{border-color:var(--bad)}
+.eye{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--dim);cursor:pointer;font-size:11px}
+.meter{display:flex;gap:4px;margin-top:8px}.meter i{flex:1;height:3px;border-radius:9px;background:var(--s2);transition:.3s}.hint{font-size:11px;color:var(--dim);margin-top:6px}
+.row{display:flex;justify-content:space-between;align-items:center;margin:16px 0 20px;font-size:12.5px;color:var(--mu)}.row label{margin:0;text-transform:none;letter-spacing:0;font-size:12.5px;display:flex;gap:8px;align-items:center;cursor:pointer}
+input[type=checkbox]{accent-color:#c9a96e}
+.btn{width:100%;padding:13px;border-radius:10px;border:0;background:linear-gradient(135deg,#f1e4c4,#c9a96e 55%,#8f7340);color:#1a1714;font:600 13px Inter;letter-spacing:.06em;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,169,110,.25)}
+.btn.g{background:var(--s1);color:var(--tx);border:1px solid var(--line);font-weight:500;letter-spacing:0;margin-top:10px}
+.or{display:flex;align-items:center;gap:12px;color:var(--dim);font-size:11px;margin:20px 0}.or:before,.or:after{content:"";flex:1;height:1px;background:var(--line)}
+.soc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.soc .btn{margin:0}
+.view{display:none;animation:in .35s}.view.on{display:block}@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.otp{display:flex;gap:9px;justify-content:space-between}.otp input{text-align:center;font-size:20px;padding:12px 0;font-family:'Playfair Display',serif}
+.msg{font-size:12px;margin-top:12px;min-height:16px;color:var(--bad)}.msg.ok{color:var(--ok)}
+.ok-ic{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font-size:26px;color:var(--gold);margin-bottom:20px}
+.foot{margin-top:auto;text-align:center;font-size:11px;color:var(--dim)}.back{font-size:12.5px;display:inline-block;margin-bottom:18px;color:var(--mu)}
+@media(max-width:900px){body{grid-template-columns:1fr}.hero{display:none}.right{padding:24px}}
+</style></head><body>
+<section class="hero"><div class="logo">AURA LUXE<small>RESIDENCES</small></div>
+<div><blockquote data-i="quote"></blockquote><cite><i></i><span><b style="color:var(--tx);font-weight:500">Priya Sharma</b><br><span data-i="role"></span></span></cite>
+<div class="stats"><div><b>240+</b><span data-i="s1"></span></div><div><b>98%</b><span data-i="s2"></span></div><div><b>24/7</b><span data-i="s3"></span></div></div></div></section>
+<section class="right"><div class="bar"><a href="index.html" style="font-size:12.5px">← <span data-i="site"></span></a>
+<div class="lang" id="lang"><button data-l="en" class="on">EN</button><button data-l="ta">தமிழ்</button><button data-l="hi">हिंदी</button></div></div>
+<div class="box">
+<div class="view on" id="v-in"><h1 data-i="welcome"></h1><p class="sub" data-i="welcomeSub"></p>
+<div class="tabs"><button class="on" data-t="in" data-i="tabIn"></button><button data-t="up" data-i="tabUp"></button></div>
+<div id="mode-pw"><label data-i="id"></label><input type="text" id="id" placeholder="name@email.com / +91…" autocomplete="username">
+<label data-i="pw"></label><div class="f"><input type="password" id="pw" autocomplete="current-password"><button class="eye" type="button" data-eye="pw" data-i="show"></button></div>
+<div class="row"><label><input type="checkbox" id="rem" checked><span data-i="remember"></span></label><a id="go-forgot" data-i="forgot"></a></div></div>
+<div id="mode-up" style="display:none"><label data-i="name"></label><input type="text" id="nm"><label data-i="email"></label><input type="email" id="em"><label data-i="phone"></label><input type="tel" id="ph" placeholder="+91 …"><label data-i="pw"></label><div class="f"><input type="password" id="pw2"><button class="eye" type="button" data-eye="pw2" data-i="show"></button></div>
+<div class="meter" id="meter"><i></i><i></i><i></i><i></i></div><p class="hint" id="mh" data-i="pwHint"></p>
+<div class="row"><label><input type="checkbox" id="terms"><span data-i="terms"></span></label></div></div>
+<button class="btn" id="submit"></button><p class="msg" id="msg"></p>
+<div class="or" data-i="or"></div>
+<div class="soc"><button class="btn g" data-soc="Google">Google</button><button class="btn g" data-soc="Apple">Apple</button></div>
+<button class="btn g" id="go-otp" data-i="otpLogin"></button></div>
+<div class="view" id="v-forgot"><a class="back" data-go="in">← <span data-i="back"></span></a><h1 data-i="fTitle"></h1><p class="sub" data-i="fSub"></p><label data-i="id"></label><input type="text" id="fid"><button class="btn" id="sendOtp" style="margin-top:20px" data-i="sendCode"></button><p class="msg" id="fm"></p></div>
+<div class="view" id="v-otp"><a class="back" data-go="in">← <span data-i="back"></span></a><h1 data-i="oTitle"></h1><p class="sub"><span data-i="oSub"></span> <b id="oto" style="color:var(--gl)"></b></p>
+<div class="otp" id="otp"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"></div>
+<button class="btn" id="verify" style="margin-top:22px" data-i="verify"></button><p class="msg" id="om"></p><p class="hint"><span id="timer"></span> · <a id="resend" data-i="resend"></a></p><p class="hint">Demo code: <b style="color:var(--gold)">123456</b></p></div>
+<div class="view" id="v-reset"><h1 data-i="rTitle"></h1><p class="sub" data-i="rSub"></p><label data-i="newpw"></label><div class="f"><input type="password" id="np"><button class="eye" type="button" data-eye="np" data-i="show"></button></div><label data-i="confirm"></label><input type="password" id="cp"><button class="btn" id="doReset" style="margin-top:22px" data-i="reset"></button><p class="msg" id="rm"></p></div>
+<div class="view" id="v-done"><div class="ok-ic">✓</div><h1 id="dT"></h1><p class="sub" id="dS"></p><button class="btn" id="goDash" data-i="toDash"></button></div>
+</div><p class="foot">© 2026 Aura Luxe Residences · <a href="legal.html#privacy" data-i="privacy"></a> · <a href="faq.html" data-i="help"></a></p></section>
+<script>
+const T={en:{quote:"“We found our dream home in one afternoon. The experience felt more like a concierge than a rental.”",role:"Tenant · Beverly Hills",s1:"Premium homes",s2:"Tenant satisfaction",s3:"Concierge support",site:"Back to website",welcome:"Welcome back",welcomeSub:"Sign in to manage your visits, bookings and rental portfolio.",tabIn:"Sign in",tabUp:"Create account",id:"Email or phone",pw:"Password",show:"Show",hide:"Hide",remember:"Keep me signed in",forgot:"Forgot password?",name:"Full name",email:"Email",phone:"Phone",pwHint:"Use 8+ characters with letters, numbers & a symbol.",terms:"I agree to the Terms & Privacy Policy",signin:"SIGN IN",signup:"CREATE ACCOUNT",or:"or continue with",otpLogin:"Sign in with one-time code",back:"Back to sign in",fTitle:"Forgot password?",fSub:"Enter your email or phone and we'll send a 6-digit verification code.",sendCode:"SEND CODE",oTitle:"Verify it's you",oSub:"Enter the code sent to",verify:"VERIFY",resend:"Resend code",rTitle:"Set a new password",rSub:"Choose a strong password you haven't used before.",newpw:"New password",confirm:"Confirm password",reset:"RESET PASSWORD",toDash:"GO TO MY ACCOUNT",privacy:"Privacy",help:"Help",eReq:"Please fill in all required fields.",eId:"Enter a valid email or phone.",ePw:"Password must be at least 8 characters.",eTerms:"Please accept the terms to continue.",eCode:"Incorrect code. Try 123456.",eMatch:"Passwords do not match.",dIn:"You're signed in",dUp:"Account created",dRe:"Password updated",dSub:"Redirecting to your account…",sec:"Resend in",soc:"connecting…"},
+ta:{quote:"“ஒரே மதியத்தில் எங்கள் கனவு இல்லத்தைக் கண்டோம். இது வாடகை அல்ல, ஒரு கான்சியர்ஜ் அனுபவம்.”",role:"குடியிருப்பாளர் · பெவர்லி ஹில்ஸ்",s1:"பிரீமியம் இல்லங்கள்",s2:"வாடிக்கையாளர் திருப்தி",s3:"கான்சியர்ஜ் ஆதரவு",site:"இணையதளத்திற்குத் திரும்பு",welcome:"மீண்டும் வருக",welcomeSub:"உங்கள் வருகைகள், முன்பதிவுகளை நிர்வகிக்க உள்நுழையவும்.",tabIn:"உள்நுழை",tabUp:"கணக்கை உருவாக்கு",id:"மின்னஞ்சல் அல்லது தொலைபேசி",pw:"கடவுச்சொல்",show:"காட்டு",hide:"மறை",remember:"என்னை உள்நுழைந்தே வை",forgot:"கடவுச்சொல் மறந்துவிட்டதா?",name:"முழு பெயர்",email:"மின்னஞ்சல்",phone:"தொலைபேசி",pwHint:"8+ எழுத்துகள், எண்கள் மற்றும் ஒரு குறியீடு பயன்படுத்தவும்.",terms:"விதிமுறைகள் & தனியுரிமைக் கொள்கையை ஏற்கிறேன்",signin:"உள்நுழை",signup:"கணக்கை உருவாக்கு",or:"அல்லது இதன் மூலம் தொடரவும்",otpLogin:"ஒருமுறை குறியீட்டுடன் உள்நுழை",back:"உள்நுழைவுக்குத் திரும்பு",fTitle:"கடவுச்சொல் மறந்துவிட்டதா?",fSub:"உங்கள் மின்னஞ்சல் அல்லது தொலைபேசியை உள்ளிடவும், 6 இலக்கக் குறியீடு அனுப்புவோம்.",sendCode:"குறியீடு அனுப்பு",oTitle:"உறுதிப்படுத்துங்கள்",oSub:"இதற்கு அனுப்பிய குறியீட்டை உள்ளிடவும்:",verify:"சரிபார்",resend:"மீண்டும் அனுப்பு",rTitle:"புதிய கடவுச்சொல்",rSub:"முன்பு பயன்படுத்தாத வலுவான கடவுச்சொல்லைத் தேர்வு செய்யவும்.",newpw:"புதிய கடவுச்சொல்",confirm:"கடவுச்சொல்லை உறுதிப்படுத்து",reset:"கடவுச்சொல்லை மாற்று",toDash:"டாஷ்போர்டுக்குச் செல்",privacy:"தனியுரிமை",help:"உதவி",eReq:"தேவையான அனைத்தையும் நிரப்பவும்.",eId:"சரியான மின்னஞ்சல் அல்லது தொலைபேசியை உள்ளிடவும்.",ePw:"கடவுச்சொல் குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்.",eTerms:"தொடர விதிமுறைகளை ஏற்கவும்.",eCode:"தவறான குறியீடு. 123456 முயற்சிக்கவும்.",eMatch:"கடவுச்சொற்கள் பொருந்தவில்லை.",dIn:"உள்நுழைந்துவிட்டீர்கள்",dUp:"கணக்கு உருவாக்கப்பட்டது",dRe:"கடவுச்சொல் புதுப்பிக்கப்பட்டது",dSub:"டாஷ்போர்டுக்கு மாற்றப்படுகிறது…",sec:"மீண்டும் அனுப்ப",soc:"இணைக்கிறது…"},
+hi:{quote:"“हमें एक ही दोपहर में अपना सपनों का घर मिल गया। यह किराये से ज़्यादा कॉन्सिएर्ज अनुभव था।”",role:"किरायेदार · बेवर्ली हिल्स",s1:"प्रीमियम घर",s2:"ग्राहक संतुष्टि",s3:"कॉन्सिएर्ज सहायता",site:"वेबसाइट पर वापस",welcome:"वापसी पर स्वागत है",welcomeSub:"अपनी विज़िट और बुकिंग प्रबंधित करने के लिए साइन इन करें।",tabIn:"साइन इन",tabUp:"खाता बनाएँ",id:"ईमेल या फ़ोन",pw:"पासवर्ड",show:"दिखाएँ",hide:"छिपाएँ",remember:"मुझे साइन इन रखें",forgot:"पासवर्ड भूल गए?",name:"पूरा नाम",email:"ईमेल",phone:"फ़ोन",pwHint:"8+ अक्षर, अंक और एक चिह्न का उपयोग करें।",terms:"मैं नियम व गोपनीयता नीति से सहमत हूँ",signin:"साइन इन",signup:"खाता बनाएँ",or:"या इससे जारी रखें",otpLogin:"वन-टाइम कोड से साइन इन करें",back:"साइन इन पर वापस",fTitle:"पासवर्ड भूल गए?",fSub:"अपना ईमेल या फ़ोन दर्ज करें, हम 6 अंकों का कोड भेजेंगे।",sendCode:"कोड भेजें",oTitle:"पुष्टि करें",oSub:"इस पर भेजा गया कोड दर्ज करें:",verify:"सत्यापित करें",resend:"कोड दोबारा भेजें",rTitle:"नया पासवर्ड सेट करें",rSub:"पहले कभी उपयोग न किया हुआ मज़बूत पासवर्ड चुनें।",newpw:"नया पासवर्ड",confirm:"पासवर्ड की पुष्टि करें",reset:"पासवर्ड रीसेट करें",toDash:"डैशबोर्ड पर जाएँ",privacy:"गोपनीयता",help:"सहायता",eReq:"कृपया सभी आवश्यक फ़ील्ड भरें।",eId:"मान्य ईमेल या फ़ोन दर्ज करें।",ePw:"पासवर्ड कम से कम 8 अक्षर का हो।",eTerms:"जारी रखने हेतु नियम स्वीकार करें।",eCode:"गलत कोड। 123456 आज़माएँ।",eMatch:"पासवर्ड मेल नहीं खाते।",dIn:"आप साइन इन हैं",dUp:"खाता बन गया",dRe:"पासवर्ड अपडेट हुआ",dSub:"डैशबोर्ड पर भेजा जा रहा है…",sec:"दोबारा भेजें",soc:"कनेक्ट हो रहा है…"}};
+const $=i=>document.getElementById(i);let L=localStorage.getItem('lang')||'en',tab='in',useOtp=false,tm,who='',done='dIn';
+const t=k=>T[L][k];
+function render(){document.documentElement.lang=L;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=t(e.dataset.i));
+document.querySelectorAll('[data-eye]').forEach(b=>b.textContent=$(b.dataset.eye).type=='password'?t('show'):t('hide'));
+$('submit').textContent=tab=='in'?t('signin'):t('signup');document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.l==L));
+if($('v-done').classList.contains('on')){$('dT').textContent=t(done);$('dS').textContent=t('dSub')}}
+const show=v=>{document.querySelectorAll('.view').forEach(x=>x.classList.remove('on'));$('v-'+v).classList.add('on');document.querySelectorAll('.msg').forEach(m=>m.textContent='')};
+const msg=(id,k,ok)=>{$(id).textContent=t(k);$(id).className='msg'+(ok?' ok':'')};
+const validId=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||/^\+?[\d\s-]{10,14}$/.test(v);
+document.querySelectorAll('#lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;localStorage.setItem('lang',L);render()});
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;useOtp=false;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x==b));$('mode-pw').style.display=tab=='in'?'':'none';$('mode-up').style.display=tab=='up'?'':'none';$('go-otp').style.display=tab=='in'?'':'none';render()});
+document.querySelectorAll('[data-eye]').forEach(b=>b.onclick=()=>{const i=$(b.dataset.eye);i.type=i.type=='password'?'text':'password';render()});
+document.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>show(a.dataset.go));
+const score=p=>[p.length>=8,/[A-Z]/.test(p)&&/[a-z]/.test(p),/\d/.test(p),/[^\w\s]/.test(p)].filter(Boolean).length;
+const paint=(p,m)=>{const s=score(p);document.querySelectorAll(m+' i').forEach((i,n)=>i.style.background=n<s?['#d9806f','#e0b25c','#c9a96e','#7fc8a0'][s-1]:'')};
+$('pw2').oninput=e=>paint(e.target.value,'#meter');
+const dest=()=>'account.html';
+function finish(name,k){who=name||who||'Guest';const raw=($('id').value+' '+$('em').value+' '+who).trim().toLowerCase();localStorage.setItem('auraRole','customer');localStorage.setItem('auraUser',who);done=k;show('done');render();setTimeout(()=>location.href=dest(),2200)}
+$('submit').onclick=()=>{$('id').classList.remove('err');
+if(tab=='in'){const v=$('id').value.trim();if(!v||(!useOtp&&!$('pw').value))return msg('msg','eReq');if(!validId(v)){$('id').classList.add('err');return msg('msg','eId')}
+if(useOtp){who=v;return sendCode(v,'otp')}
+if($('pw').value.length<8)return msg('msg','ePw');finish(v.split('@')[0].replace(/^./,c=>c.toUpperCase()),'dIn')}
+else{if(!$('nm').value.trim()||!$('em').value.trim()||!$('pw2').value)return msg('msg','eReq');if(!validId($('em').value.trim()))return msg('msg','eId');if($('pw2').value.length<8)return msg('msg','ePw');if(!$('terms').checked)return msg('msg','eTerms');finish($('nm').value.trim().split(' ')[0],'dUp')}};
+$('go-otp').onclick=()=>{useOtp=!useOtp;$('mode-pw').querySelector('.f').parentNode.style.opacity=1;$('pw').closest('.f').style.display=useOtp?'none':'';$('pw').parentNode.previousElementSibling.style.display=useOtp?'none':'';$('submit').textContent=useOtp?t('sendCode'):t('signin')};
+$('go-forgot').onclick=()=>show('forgot');
+function sendCode(v,from){$('oto').textContent=v;show('otp');$('otp').children[0].focus();clearInterval(tm);let s=30;const tick=()=>{$('timer').textContent=s>0?t('sec')+' 0:'+String(s).padStart(2,'0'):'';$('resend').style.display=s>0?'none':''};tick();tm=setInterval(()=>{s--;tick();if(s<=0)clearInterval(tm)},1000);window._from=from}
+$('sendOtp').onclick=()=>{const v=$('fid').value.trim();if(!validId(v))return msg('fm','eId');who=v;sendCode(v,'reset')};
+$('resend').onclick=()=>sendCode($('oto').textContent,window._from);
+const ob=[...$('otp').children];ob.forEach((b,n)=>{b.oninput=()=>{b.value=b.value.replace(/\D/g,'');if(b.value&&ob[n+1])ob[n+1].focus()};b.onkeydown=e=>{if(e.key=='Backspace'&&!b.value&&ob[n-1])ob[n-1].focus()};b.onpaste=e=>{const d=e.clipboardData.getData('text').replace(/\D/g,'').slice(0,6);if(d){e.preventDefault();[...d].forEach((c,i)=>ob[i].value=c);ob[Math.min(d.length,5)].focus()}}});
+$('verify').onclick=()=>{if(ob.map(b=>b.value).join('')!='123456')return msg('om','eCode');ob.forEach(b=>b.value='');if(window._from=='reset')show('reset');else finish(who.split('@')[0].replace(/^./,c=>c.toUpperCase()),'dIn')};
+$('np').oninput=e=>{};
+$('doReset').onclick=()=>{if($('np').value.length<8)return msg('rm','ePw');if($('np').value!=$('cp').value)return msg('rm','eMatch');finish(who.split('@')[0],'dRe')};
+document.querySelectorAll('[data-soc]').forEach(b=>b.onclick=()=>{const o=b.textContent;b.textContent=t('soc');setTimeout(()=>{b.textContent=o;finish('Selvakumar','dIn')},900)});
+$('goDash').onclick=()=>location.href=dest();
+render();
+</script></body></html>

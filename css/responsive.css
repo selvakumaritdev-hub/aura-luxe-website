@@ -1,0 +1,422 @@
+/* ==========================================================================
+   AURA LUXE RESIDENCES - RESPONSIVE STYLESHEET
+   Supports Desktop, Laptop, Tablet, Mobile and Small Mobile screens
+   ========================================================================== */
+
+/* --- 1. LARGE DESKTOPS & HIGH-RES DISPLAYS (> 1440px) --- */
+@media (min-width: 1441px) {
+  :root {
+    --container-width: 1400px;
+  }
+}
+
+/* --- 2. LAPTOPS & STANDARD DESKTOPS (1024px – 1280px) --- */
+@media (max-width: 1280px) {
+  .hero-container {
+    gap: 2rem;
+  }
+
+  .hero-main-img {
+    height: 420px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- 3. TABLETS (LANDSCAPE & PORTRAIT: 769px – 1023px) --- */
+@media (max-width: 1023px) {
+  /* Navigation */
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .btn-nav-cta {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 2rem);
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
+  }
+
+  .hero-stats-strip {
+    justify-content: center;
+  }
+
+  .hero-visual-col {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .badge-top-right {
+    top: -10px;
+    right: 0px;
+  }
+
+  .badge-bottom-left {
+    bottom: -10px;
+    left: 0px;
+  }
+
+  /* Intro Section */
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .intro-badges {
+    justify-content: center;
+  }
+
+  /* Property Cards */
+  .property-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 3rem auto 0;
+  }
+
+  /* Horizontal Showcase */
+  .h-slide-item {
+    width: 85vw;
+  }
+
+  .h-slide-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .h-slide-img-box {
+    height: 300px;
+  }
+
+  .h-slide-overlay {
+    background: linear-gradient(180deg, transparent 50%, rgba(18, 21, 28, 0.95) 100%);
+  }
+
+  .h-slide-content {
+    padding: 2rem;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Location */
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Footer */
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Quick View Modal */
+  .prop-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .prop-modal-img {
+    height: 250px;
+  }
+}
+
+/* --- 4. SMARTPHONES & MOBILE DEVICES (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Disable custom cursor on mobile devices */
+  .custom-cursor {
+    display: none !important;
+  }
+
+  /* Ambient audio button */
+  .ambient-sound-btn {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.65rem;
+  }
+
+  /* Section Padding */
+  .properties-section,
+  .amenities-section,
+  .three-scene-section,
+  .why-us-section,
+  .location-section,
+  .final-cta-section {
+    padding: 5rem 0;
+  }
+
+  .section-container {
+    padding: 0 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Hero Section */
+  .hero-main-img {
+    height: 320px;
+  }
+
+  .floating-badge {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .badge-title {
+    font-size: 0.75rem;
+  }
+
+  .badge-sub {
+    font-size: 0.65rem;
+  }
+
+  .floating-price-tag {
+    top: 15px;
+    left: -10px;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .tag-price {
+    font-size: 1.1rem;
+  }
+
+  .hero-stats-strip {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    flex: 1 1 40%;
+  }
+
+  /* Horizontal Showcase Header */
+  .horizontal-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .showcase-tracker {
+    align-items: flex-start;
+  }
+
+  .h-slide-item {
+    width: 90vw;
+  }
+
+  /* Full Screen Slider */
+  .fullscreen-slider-section {
+    height: auto;
+    min-height: 540px;
+    padding: 4rem 0;
+  }
+
+  .fs-slide {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+
+  .fs-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .fs-dot {
+    display: none;
+  }
+
+  .slider-controls-bar {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 2rem auto 0;
+    justify-content: center;
+    width: max-content;
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  /* 3D Scene Container */
+  .three-canvas-wrapper {
+    height: 420px;
+  }
+
+  .three-controls-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .three-view-presets {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .view-preset-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.68rem;
+  }
+
+  .three-hint {
+    display: none;
+  }
+
+  .three-info-overlay {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  /* Why Us Cards */
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  /* Map Container */
+  .map-visual-container {
+    height: 340px;
+  }
+
+  .map-hotspot-pin {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .pin-label {
+    font-size: 0.65rem;
+  }
+
+  /* Final CTA */
+  .final-cta-section {
+    padding: 6rem 0 4rem;
+  }
+
+  .cta-buttons-strip {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn-cta-large {
+    width: 100%;
+  }
+
+  .inquiry-form-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  /* Footer */
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* --- 5. SMALL MOBILE SCREENS (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+  }
+
+  .hero-main-img {
+    height: 260px;
+  }
+
+  .card-specs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .card-footer-action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btn-card-details {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal-card {
+    padding: 1.8rem 1.2rem;
+  }
+}
+
+/* --- 6. ACCESSIBILITY & PREFERS-REDUCED-MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .pulse-dot, .monogram-glow, .hub-pulse, .scroll-wheel {
+    animation: none !important;
+  }
+}

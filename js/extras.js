@@ -1,0 +1,1 @@
+document.querySelectorAll('.property-card-3d-wrapper[data-prop-id]').forEach(function(w){var c=w.querySelector('.card-content-wrap');if(!c)return;var a=document.createElement('a');a.className='ax-more';a.href='property.html?id='+w.dataset.propId;a.textContent='FULL DETAILS →';a.addEventListener('click',function(e){e.stopPropagation()});c.appendChild(a)});

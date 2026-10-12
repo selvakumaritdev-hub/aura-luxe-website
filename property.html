@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property | Aura Luxe Residences</title>
+  <meta name="description" content="Aura Luxe Residences offers premium luxury houses and architectural villas for rent in prime locations in Los Angeles, California">
+  <meta name="keywords" content="houses for rent, luxury villa rental, Los Angeles luxury rentals, premium rental homes, architectural villa rent">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#0b0a09">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="AURA LUXE RESIDENCES | Premium Houses For Rent">
+  <meta property="og:description" content="Discover exquisite luxury homes & villas for rent.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- CDNs for Three.js, GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+<body class="">
+
+
+  <!-- Custom Minimal Cursor (Desktop only) -->
+  <div id="custom-cursor" class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-label">VIEW</div>
+  </div>
+
+  <!-- Audio Toggle (Subtle ambient experience) -->
+  <button id="ambient-audio-toggle" class="ambient-sound-btn" aria-label="Toggle ambient luxury sound" title="Ambient Sound Toggle">
+    <svg class="icon-sound-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg class="icon-sound-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+    <span>SOUND</span>
+  </button>
+
+  
+
+<header id="main-header" class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" data-cursor="hover">
+        <div class="brand-symbol">
+          <span class="symbol-crest">◆</span>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">AURA LUXE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links"><li><a href="index.html" class="nav-link" data-cursor="hover">HOME</a></li><li><a href="properties.html" class="nav-link" data-cursor="hover">PROPERTIES</a></li><li class="nav-dd"><a href="showcase.html" class="nav-link" data-cursor="hover">EXPLORE ▾</a><ul><li><a href="showcase.html">Showcase</a></li><li><a href="tour-3d.html">3D Tour</a></li><li><a href="amenities.html">Amenities</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="quiz.html">Find Your Home</a></li><li><a href="location.html">Location</a></li></ul></li><li><a href="pricing.html" class="nav-link" data-cursor="hover">PRICING</a></li><li class="nav-dd"><a href="about.html" class="nav-link active" data-cursor="hover">ABOUT ▾</a><ul><li><a href="about.html">Our Story</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="blog.html">Journal</a></li><li><a href="faq.html">FAQ</a></li></ul></li><li><a href="contact.html" class="nav-link" data-cursor="hover">CONTACT</a></li></ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-signin" data-cursor="hover">SIGN IN</a>
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar bar-1"></span>
+          <span class="hamburger-bar bar-2"></span>
+          <span class="hamburger-bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <div class="drawer-header">
+          <span class="drawer-brand">AURA LUXE</span>
+        </div>
+        <ul class="drawer-links"><li><a href="index.html" class="drawer-link">HOME</a></li><li><a href="properties.html" class="drawer-link">PROPERTIES</a></li><li><a href="pricing.html" class="drawer-link">PRICING</a></li><li><a href="contact.html" class="drawer-link">CONTACT</a></li><li><details><summary class="drawer-link">EXPLORE</summary><div class="drawer-sub"><a href="showcase.html">Showcase</a><a href="tour-3d.html">3D Tour</a><a href="amenities.html">Amenities</a><a href="gallery.html">Gallery</a><a href="quiz.html">Find Your Home</a><a href="location.html">Location</a></div></details></li><li><details><summary class="drawer-link">ABOUT</summary><div class="drawer-sub"><a href="about.html">Our Story</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Journal</a><a href="faq.html">FAQ</a></div></details></li></ul>
+        <div class="drawer-cta-wrap"><a href="login.html" class="btn btn-gold btn-block drawer-btn drawer-signin">SIGN IN</a><div class="drawer-quick"><a href="https://wa.me/919363638730" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+919363638730">Call us</a></div></div>
+      </div>
+    </div>
+  </header>
+<main>
+<section class="page-banner"><div class="pb-bg" id="pb"></div><div class="pb-inner"><div class="crumbs"><a href="index.html">Home</a> / <a href="properties.html">Properties</a> / <span id="cr"></span></div><p class="pg-eyebrow" id="cat"></p><h1 class="pg-title" id="tt"></h1><p class="pb-sub" id="loc"></p></div></section>
+<section class="pg-section"><div class="pg-wrap"><div class="pd-grid"><div><img id="main" class="pd-main" alt=""><div class="pd-th" id="th"></div><h2 class="pd-h">About this home</h2><p class="ax-p" id="ds"></p><div class="pd-specs" id="sp"></div></div>
+<aside class="pd-side"><div class="ax-card"><small class="pd-k">Monthly rent</small><div class="ax-price"><b id="pr"></b><span>/ month</span></div><p class="pd-dep" id="dp"></p>
+<a class="btn btn-gold" id="bk" target="_blank" rel="noopener" style="width:100%;text-align:center;margin:14px 0 8px">BOOK A PRIVATE TOUR</a><button class="pd-b" id="sv">♡ Save this home</button>
+<div class="pd-calc"><small class="pd-k">Cost estimator</small><select id="mo"><option value="6">6 months</option><option value="12" selected>12 months</option><option value="24">24 months</option></select><div class="pd-row"><span>Total rent</span><b id="c1"></b></div><div class="pd-row"><span>Refundable deposit</span><b id="c2"></b></div><div class="pd-row pd-t"><span>Due at move-in</span><b id="c3"></b></div></div></div></aside></div>
+<h2 class="pd-h" style="margin-top:56px">You may also like</h2><div class="ax-grid" id="sim"></div></div></section>
+<script>(function(){var D={"villa-01": {"title": "Modern Architectural Villa", "category": "Modern Duplex Villa", "location": "Beverly Hills, Los Angeles, CA", "price": "$4,500 / Month", "deposit": "$4,500 (Refundable Security Deposit)", "image": "assets/images/villa_front.webp", "specs": {"bedrooms": "3 Master Bedrooms with En-suite Baths", "bathrooms": "2 Contemporary Bathrooms", "area": "2,900 sq.ft Living Area", "furnishing": "Semi-Furnished (Wardrobes, Modular Kitchen, LED Lights)", "facing": "East Facing, Morning Light", "parking": "Dedicated Covered Porch for SUV + 2-Wheeler", "water": "Filtered Water + Private Pool", "power": "Solar + Battery Backup"}, "description": "An exquisitely designed 3-bedroom independent villa nestled in the peaceful residential enclaves of Beverly Hills. Features expansive ceiling heights, large acoustic glass windows, landscaped front lawn, and serene privacy.", "photos": ["assets/images/villa_front.webp", "assets/images/modern_villa_night.webp", "assets/images/pool_lounge.webp"], "num": 4500}, "duplex-02": {"title": "The Glass Sanctuary", "category": "Ultra Luxury Duplex", "location": "Malibu, Los Angeles, CA", "price": "$9,500 / Month", "deposit": "$9,500 (Refundable Security Deposit)", "image": "assets/images/living_room.webp", "specs": {"bedrooms": "4 Grand Bedrooms with Walk-in Closets", "bathrooms": "3 Designer Spa-style Bathrooms", "area": "4,200 sq.ft Double-Height Duplex", "furnishing": "Fully Furnished with Teakwood Furniture & Italian Marble", "facing": "North-East Facing", "parking": "2 Covered Car Spaces", "water": "24/7 RO Treated Water + Dual Sumps", "power": "Whole-Home Battery Backup"}, "description": "A masterpiece of modern architectural design. Boasts an impressive double-height living room overlooking a private Japanese courtyard garden, premium Italian marble flooring, and smart home lighting.", "photos": ["assets/images/living_room.webp", "assets/images/grand_hall.webp", "assets/images/mansion_pool.webp"], "num": 9500}, "penthouse-03": {"title": "Royal Horizon Sky Suite", "category": "Skyline Penthouse", "location": "Hollywood Hills, Los Angeles, CA", "price": "$7,200 / Month", "deposit": "$7,200 (Refundable Security Deposit)", "image": "assets/images/balcony.webp", "specs": {"bedrooms": "3 Panoramic Bedrooms", "bathrooms": "3 Attached Modern Bathrooms", "area": "3,500 sq.ft Sky Residence", "furnishing": "Fully Furnished & Custom Decor", "facing": "West Facing with Panoramic Sunset Horizon", "parking": "Covered Basement Parking Slot", "water": "Filtered Water Throughout", "power": "24/7 Continuous Power Grid"}, "description": "Perched high with breathtaking views over Los Angeles skyline. Enjoy spectacular golden hours from the 40-foot expansive wraparound balcony, wooden sundeck loungers, and custom ambient lighting.", "photos": ["assets/images/balcony.webp", "assets/images/master_suite.webp", "assets/images/pool_lounge.webp"], "num": 7200}, "villa-04": {"title": "Palm Crest Gourmet Villa", "category": "Modern Gourmet Villa", "location": "Santa Monica, Los Angeles, CA", "price": "$6,200 / Month", "deposit": "$6,200 (Refundable Security Deposit)", "image": "assets/images/kitchen_dining.webp", "specs": {"bedrooms": "3 Spacious Bedroom Suites", "bathrooms": "2 Attached Modern Bathrooms", "area": "3,300 sq.ft Ground + 1 Floor", "furnishing": "Designer Modular Kitchen with Island & Wine Rack", "facing": "East Facing", "parking": "Covered Car Porch", "water": "Private Well & Filtration", "power": "Solar Hybrid Power Backup"}, "description": "Tailored for those who appreciate fine culinary spaces and tranquil living. Features an imported dark marble waterfall island counter, built-in German appliances, and effortless open-concept entertaining flow.", "photos": ["assets/images/kitchen_dining.webp", "assets/images/jungle_villa.webp", "assets/images/hero.webp"], "num": 6200}},q=new URLSearchParams(location.search).get('id'),p=D[q]||D['villa-01'];if(!D[q])q='villa-01';var $=function(i){return document.getElementById(i)},f=function(n){return '$'+n.toLocaleString()};
+document.title=p.title+' | Aura Luxe Residences';$('pb').style.backgroundImage='url('+p.photos[0]+')';$('cr').textContent=p.title;$('cat').textContent=p.category;$('tt').textContent=p.title;$('loc').textContent=p.location;$('ds').textContent=p.description;
+$('pr').textContent=f(p.num);$('dp').textContent=p.deposit;$('bk').href='https://wa.me/919363638730?text='+encodeURIComponent('Hello Aura Luxe, I would like a private tour of '+p.title+'.');
+var m=$('main');m.src=p.photos[0];m.alt=p.title;$('th').innerHTML=p.photos.map(function(s,i){return '<button class="'+(i?'':'on')+'"><img src="'+s+'" alt="'+p.title+' photo '+(i+1)+'"></button>'}).join('');
+$('th').querySelectorAll('button').forEach(function(b,i){b.onclick=function(){m.src=p.photos[i];$('th').querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}});
+var K=['bedrooms','bathrooms','area','furnishing','facing','parking','water','power'],N=['Bedrooms','Bathrooms','Area','Furnishing','Facing','Parking','Water','Power'];
+$('sp').innerHTML=N.map(function(n){return '<div><small>'+n+'</small><span></span></div>'}).join('');$('sp').querySelectorAll('span').forEach(function(e,i){e.textContent=p.specs[K[i]]});
+function calc(){var n=+$('mo').value;$('c1').textContent=f(p.num*n);$('c2').textContent=f(p.num);$('c3').textContent=f(p.num*2)}$('mo').onchange=calc;calc();
+var S=[];try{S=JSON.parse(localStorage.getItem('auraSaved')||'[]')}catch(e){}function paint(){$('sv').textContent=S.indexOf(q)>-1?'♥ Saved to your account':'♡ Save this home'}paint();
+$('sv').onclick=function(){var i=S.indexOf(q);i>-1?S.splice(i,1):S.push(q);try{localStorage.setItem('auraSaved',JSON.stringify(S))}catch(e){}paint()};
+$('sim').innerHTML=Object.keys(D).filter(function(k){return k!=q}).slice(0,3).map(function(k){var o=D[k];return '<a class="ax-post" href="property.html?id='+k+'"><img src="'+o.photos[0]+'" alt="'+o.title+'" loading="lazy"><div><small>'+o.location.split(',')[0]+'</small><h3>'+o.title+'</h3><span>'+f(o.num)+' / month →</span></div></a>'}).join('')})();</script>
+</main>
+<footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="f-symbol">◆</span>
+            <span class="f-name">AURA LUXE</span>
+          </div>
+          <p class="f-desc">
+            Redefining residential rental experiences in Los Angeles with architectural excellence, uncompromised safety, and absolute transparency.
+          </p>
+          <div class="f-contact-meta">
+            <p>📞 Phone: <span>+91 93636 38730</span></p>
+            <p>💬 WhatsApp: <span>919363638730</span></p>
+            <p>✉️ Email: <span>selvakumar.itdev@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="f-col-title">Navigation</h4>
+          <ul class="f-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Featured Properties</a></li>
+            <li><a href="showcase.html">Cinematic Showcase</a></li>
+            <li><a href="amenities.html">Specifications</a></li>
+            <li><a href="tour-3d.html">3D Villa Experience</a></li>
+            <li><a href="location.html">Neighborhood & Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="f-col-title">Prime Locations</h4>
+          <ul class="f-links-list">
+            <li><a href="properties.html">Beverly Hills Estates</a></li>
+            <li><a href="properties.html">Malibu Coastal</a></li>
+            <li><a href="properties.html">Hollywood Hills</a></li>
+            <li><a href="properties.html">Santa Monica Greenways</a></li>
+            <li><a href="properties.html">Alagar Kovil Road</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="f-col-title">Rental Assurance</h4>
+          <div class="assurance-pill-list">
+            <div class="assure-item">✓ Zero Brokerage Friction</div>
+            <div class="assure-item">✓ 100% Inspected & Safe</div>
+            <div class="assure-item">✓ Fully Vetted & Inspected Homes</div>
+            <div class="assure-item">✓ Swift Deposit Protocol</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-txt">
+          &copy; 2026 AURA LUXE RESIDENCES. All Rights Reserved.
+        </p>
+        <div class="f-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms of Lease</a>
+          <span>•</span>
+          <a href="#">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- ==================== BOOK A VISIT MODAL ==================== -->
+  <div id="booking-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card glass-card">
+      <button class="modal-close-btn" id="close-booking-modal-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">PRIVATE VIEWING</span>
+        <h3 class="modal-title">Schedule a Property Visit</h3>
+      </div>
+
+      <form id="schedule-visit-form" class="modal-form">
+        <div class="form-group">
+          <label>Select Preferred Residence</label>
+          <select id="modal-prop-select" class="form-input form-select">
+            <option value="Modern Villa ($4,500/mo)">Modern Architectural Villa ($4,500/mo) - Beverly Hills</option>
+            <option value="Glass Sanctuary ($9,500/mo)">The Glass Sanctuary ($9,500/mo) - Malibu</option>
+            <option value="Royal Horizon ($7,200/mo)">Royal Horizon Penthouse ($7,200/mo) - Hollywood Hills</option>
+            <option value="Palm Crest ($6,200/mo)">Palm Crest Gourmet Villa ($6,200/mo) - Santa Monica</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Visit Date</label>
+            <input type="date" id="visit-date" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label>Preferred Time Slot</label>
+            <select id="visit-time" class="form-input form-select">
+              <option value="10:00 AM - Morning">10:00 AM – Morning</option>
+              <option value="02:00 PM - Afternoon">02:00 PM – Afternoon</option>
+              <option value="05:30 PM - Golden Hour">05:30 PM – Golden Hour Tour</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="modal-name" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" id="modal-phone" class="form-input" placeholder="e.g. (310) 555-0123" required>
+          </div>
+        </div>
+
+        <button type="submit" id="confirm-booking-btn" class="btn btn-gold btn-block">
+          <span>CONFIRM VISIT RESERVATION</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== PROPERTY QUICK-VIEW MODAL ==================== -->
+  <div id="prop-details-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card modal-card-wide glass-card">
+      <button class="modal-close-btn" id="close-prop-modal-btn" aria-label="Close modal">&times;</button>
+      <div class="prop-modal-layout" id="prop-modal-dynamic-content">
+        <!-- Content will be populated dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-notification" class="toast-notification" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Inquiry received successfully!</div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  
+<a class="wa-float" href="https://wa.me/919363638730?text=Hello%20Aura%20Luxe%2C%20I%20would%20like%20to%20know%20more%20about%20your%20homes." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+<script src="js/slider.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/main.js"></script>
+</body></html>
